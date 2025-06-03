@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="src/output.css">
+  <title>Keranjang Belanja</title>
+  <script defer src="cart.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md px-6 py-4 flex justify-between items-center">
+    <div class="text-xl font-bold text-blue-600">Lampu Kandila</div>
+    <a href="index.html" class="text-blue-500 hover:underline">← Kembali</a>
+  </nav>
+
+  <!-- Cart Section -->
+  <section class="max-w-4xl mx-auto p-6 mt-6 bg-white rounded-lg shadow-md">
+    <h1 class="text-2xl font-semibold mb-4">Keranjang Belanja</h1>
+
+    <div id="cart-items" class="space-y-4"></div>
+
+    <div class="mt-6 flex justify-between items-center">
+      <h2 id="total-price" class="text-xl font-bold text-gray-700"></h2>
+      <button id="checkout-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded hidden">
+        Checkout
+      </button>
+    </div>
+  </section>
+</body>
+</html>

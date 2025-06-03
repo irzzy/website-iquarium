@@ -72,7 +72,7 @@
                 <li>
                   <a
                     class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                    href="#"
+                    href="#tentang-kami"
                   >
                     Tentang kami
                   </a>
@@ -81,7 +81,7 @@
                 <li>
                   <a
                     class="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                    href="#"
+                    href="#product-list"
                   >
                     Produk
                   </a>
@@ -91,24 +91,9 @@
           </div>
 
           <div class="flex items-center gap-4">
-            <div class="sm:flex sm:gap-4">
-              <a
-                class="rounded-md bg-sky-400 px-5 py-2.5 text-sm font-medium text-white shadow-sm dark:hover:bg-teal-500"
-                href="#"
-              >
-                Login
-              </a>
-
-              <div class="hidden sm:flex">
-                <a
-                  class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-black dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
-                  href="#"
-                >
-                  Register
-                </a>
-              </div>
-            </div>
-
+            <a href="cart.html" class="cart-icon">
+              🛒 <span id="cart-count">0</span>
+            </a>
             <div class="block md:hidden">
               <button
                 class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
@@ -136,61 +121,34 @@
     <!-- END NAVBAR -->
 
     <!-- CTA -->
-    <section class="bg-gray-50">
-      <div class="p-8 md:p-12 lg:px-16 lg:py-24">
-        <div class="mx-auto max-w-lg text-center">
-          <h2 class="text-4xl font-bold text-gray-900 md:text-3xl">
-            I - Quarium
-          </h2>
+   <!-- Tentang Kami Section -->
+<section class="bg-white py-16 mt-12" id="tentang-kami">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+    
+    <!-- Gambar di sebelah kiri -->
+    <div class="md:w-1/2">
+      <img src="img/kandila_100.jpg" alt="Tentang Kami" class="rounded-lg shadow-lg w-xs">
+    </div>
 
-          <p class="hidden text-gray-500 sm:mt-4 sm:block">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolor
-            officia blanditiis repellat in, vero, aperiam porro ipsum laboriosam
-            consequuntur exercitationem incidunt tempora nisi?
-          </p>
-        </div>
+    <!-- Teks di sebelah kanan -->
+    <div class="md:w-1/2">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">Tentang Kami</h2>
+      <p class="text-gray-600 mb-4 leading-relaxed">
+        Lampu Kandila adalah brand lokal yang menghadirkan lampu hias unik dan berkualitas tinggi untuk mempercantik setiap ruangan Anda.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        Kami percaya bahwa pencahayaan yang tepat dapat menciptakan kenyamanan dan kehangatan di rumah Anda. Dengan desain estetis dan bahan pilihan, kami siap memperindah ruangan Anda.
+      </p>
+    </div>
 
-        <div class="mx-auto mt-8 max-w-xl">
-          <form action="#" class="sm:flex sm:gap-4">
-            <div class="sm:flex-1">
-              <label for="email" class="sr-only">Email</label>
+  </div>
+</section>
 
-              <input
-                type="email"
-                placeholder="Lampu kandila"
-                class="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-xs transition focus:border-white focus:ring-3 focus:ring-yellow-400 focus:outline-hidden"
-              />
-            </div>
 
-            <button
-              type="submit"
-              class="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-sky-400 px-5 py-3 text-white transition focus:ring-3 focus:ring-yellow-400 focus:outline-hidden sm:mt-0 sm:w-auto"
-            >
-              <span class="text-sm font-medium"> Cari </span>
-
-              <svg
-                class="size-5 shadow-sm rtl:rotate-180"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
     <!-- END CALL TO ACTION -->
 
     <!-- PRODUCT LIST -->
-    <div class="grid grid-cols-3 gap-4 mx-auto p-12">
+    <div class="grid grid-cols-3 gap-4 mx-auto p-12" id="product-list">
       <a href="#" class="group relative block overflow-hidden">
         <button
           class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
@@ -234,7 +192,7 @@
 
           <form class="mt-4">
             <button
-              onclick="chatWhatsApp('Kandila 100')"
+              onclick="addToCart('Lampu Kandila 100 cm', 117000)"
               class="block w-full rounded-sm bg-sky-400 p-4 text-sm font-medium transition hover:scale-105"
             >
               Add to Cart
@@ -285,6 +243,7 @@
 
           <form class="mt-4">
             <button
+              onclick="addToCart('Lampu Kandila 80 cm', 67000)"
               class="block w-full rounded-sm bg-sky-400 p-4 text-sm font-medium transition hover:scale-105"
             >
               Add to Cart
@@ -335,6 +294,7 @@
 
           <form class="mt-4">
             <button
+              onclick="addToCart('Lampu Kandila 60 cm', 57000)"
               class="block w-full rounded-sm bg-sky-400 p-4 text-sm font-medium transition hover:scale-105"
             >
               Add to Cart
@@ -385,6 +345,7 @@
 
           <form class="mt-4">
             <button
+              onclick="addToCart('Lampu Kandila 50 cm', 47000)"
               class="block w-full rounded-sm bg-sky-400 p-4 text-sm font-medium transition hover:scale-105"
             >
               Add to Cart
@@ -435,6 +396,7 @@
 
           <form class="mt-4">
             <button
+              onclick="addToCart('Lampu Kandila 40 CM', 37000)"
               class="block w-full rounded-sm bg-sky-400 p-4 text-sm font-medium transition hover:scale-105"
             >
               Add to Cart
@@ -485,57 +447,7 @@
 
           <form class="mt-4">
             <button
-              class="block w-full rounded-sm bg-sky-400 p-4 text-sm font-medium transition hover:scale-105"
-            >
-              Add to Cart
-            </button>
-          </form>
-        </div>
-      </a>
-      <a href="#" class="group relative block overflow-hidden">
-        <button
-          class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75"
-        >
-          <span class="sr-only">Wishlist</span>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-4"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-            />
-          </svg>
-        </button>
-
-        <img
-          src="img/kandila_20.jpg"
-          alt="Kandila 20"
-          class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
-        />
-
-        <div class="relative border border-gray-100 bg-white p-6">
-          <span
-            class="bg-sky-400 px-3 py-1.5 text-xs font-medium whitespace-nowrap"
-          >
-            New
-          </span>
-
-          <h3 class="mt-4 text-lg font-medium text-gray-900">
-            Lampu kandila 20 cm
-          </h3>
-
-          <p class="mt-1.5 text-sm text-gray-700">Rp.17000</p>
-
-          <form class="mt-4">
-            <button
-              onclick="orderViaWA('Kandila 20, Ini gambarnya https://imgur.com/a/2MO08js')"
+              onclick="addToCart('Lampu Kandila 30 cm', 27000)"
               class="block w-full rounded-sm bg-sky-400 p-4 text-sm font-medium transition hover:scale-105"
             >
               Add to Cart
@@ -723,12 +635,27 @@
   </body>
 
   <script>
-    function orderViaWA(productName) {
-      const phone = "628995527135"; // ganti dengan nomor WhatsApp kamu
-      const message = `Halo, saya tertarik dengan ${productName}`;
-      const encodedMessage = encodeURIComponent(message);
-      const waUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
-      window.open(waUrl, "_blank");
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const existing = cart.find((item) => item.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name, price, qty: 1 });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+      alert(`${name} telah ditambahkan ke keranjang.`);
     }
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const count = cart.reduce((total, item) => total + item.qty, 0);
+      document.getElementById("cart-count").innerText = count;
+    }
+
+    document.addEventListener("DOMContentLoaded", updateCartCount);
   </script>
 </html>
